@@ -1,0 +1,38 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Вычисление суммы факториалов нечетных чисел</title>
+ <meta charset="utf-8">
+ <script>
+  // Функция для вычисления факториала числа
+  function factorial(n) {
+   if (n === 0 || n === 1) {
+    return 1;
+   } else {
+    return n * factorial(n-1);
+   }
+  }
+
+  // Функция для вычисления суммы факториалов нечетных чисел в интервале от a до b
+  function calculateSumOfOddFactorials(a, b) {
+   var sum = 0;
+   for (var i = a; i <= b; i++) {
+    if (i % 2 !== 0) {
+     sum += factorial(i);
+    }
+   }
+   return sum;
+  }
+
+  // Пример использования функции
+  let a = prompt('введите а');
+  var b = prompt('введите b');
+  var sum = calculateSumOfOddFactorials(a, b);
+  console.log("Сумма факториалов нечетных чисел в интервале от " + a + " до " + b + ": " + sum);
+ </script>
+</head>
+<body>
+ <h1>Вычисление суммы факториалов нечетных чисел</h1>
+</body>
+</html>

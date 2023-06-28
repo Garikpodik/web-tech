@@ -1,0 +1,30 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Проверка номера телефона и ФИО</title>
+ <meta charset="utf-8">
+ <script>
+  // Функция для проверки номера телефона и ФИО
+  function checkData(phone, name) {
+   var phonePattern = /^\d{4}-\d{3}-\w{2}-\d{2}$/;
+   var namePattern = /^[А-ЯЁ][а-яё]+\s[А-ЯЁ][а-яё]+\s[А-ЯЁ][а-яё]+$/;
+
+   if (phonePattern.test(phone) && namePattern.test(name)) {
+    console.log("Номер телефона: " + phone);
+    console.log("ФИО посетителя: " + name);
+   } else {
+    console.log("Некорректный номер телефона или ФИО!");
+   }
+  }
+
+  // Пример использования функции
+  let phone = prompt("Введите номер телефона");
+  let name = prompt("Введите ФИО");
+  checkData(phone, name);
+ </script>
+</head>
+<body>
+ <h1>Проверка номера телефона и ФИО</h1>
+</body>
+</html>

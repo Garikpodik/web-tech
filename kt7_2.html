@@ -1,0 +1,50 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Keyboard Object</title>
+ <meta charset="utf-8">
+ <script>
+  // Создаем объект с заданными свойствами
+  var keyboard = {
+   manufacturer: "Logitech",
+   keyCount: 104,
+   color: "Black",
+   mechanismType: "Membrane",
+   wired: true
+  };
+
+  // Создаем две копии объекта
+  var keyboardCopy1 = Object.assign({}, keyboard);
+  var keyboardCopy2 = Object.assign({}, keyboard);
+
+  // Изменяем три свойства в каждой копии объекта и добавляем новое свойство
+  keyboardCopy1.manufacturer = "Microsoft";
+  keyboardCopy1.color = "White";
+  keyboardCopy1.mechanismType = "Mechanical";
+  keyboardCopy1.backlit = true;
+
+  keyboardCopy2.keyCount = 87;
+  keyboardCopy2.color = "Red";
+  keyboardCopy2.wired = false;
+  keyboardCopy2.layout = "QWERTZ";
+
+  // Удаляем свойство из одной копии объекта
+  delete keyboardCopy2.mechanismType;
+
+  // Выводим результат каждого действия в консоль
+  console.log("Оригинальный объект:");
+  console.log(keyboard);
+
+  console.log("Копия объекта 1:");
+  console.log(keyboardCopy1);
+
+  console.log("Копия объекта 2:");
+  console.log(keyboardCopy2);
+ </script>
+</head>
+<body>
+ <h1>Keyboard Object</h1>
+ <p>Откройте консоль браузера, чтобы увидеть результаты выполнения скрипта.</p>
+</body>
+</html>

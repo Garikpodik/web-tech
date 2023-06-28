@@ -1,0 +1,28 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Вычисление функции</title>
+ <meta charset="utf-8">
+ <script>
+  function calculate() {
+   var x = parseFloat(document.getElementById("x").value);
+   var y = 0;
+   if (x <= 3) {
+    y = x - 2;
+   } else {
+    y = 4 - x;
+   }
+   document.getElementById("result").innerHTML = "y = " + y;
+  }
+ </script>
+</head>
+<body>
+ <h1>Вычисление функции</h1>
+ <p>Введите значение переменной X:</p>
+ <input type="text" id="x">
+ <button onclick="calculate()">Вычислить</button>
+ <p id="result"></p>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Вычисление периметра и площади прямоугольника</title>
+ <meta charset="utf-8">
+ <script>
+  // Функция для вычисления периметра прямоугольника
+  function calculatePerimeter(width, height) {
+   return 2 * (width + height);
+  }
+
+  // Функция для вычисления площади прямоугольника
+  function calculateArea(width, height) {
+   return width * height;
+  }
+
+  // Пример использования функций
+  let width = prompt('Введите ширину');
+  let height = prompt('Введите длину');
+  var perimeter = calculatePerimeter(width, height);
+  var area = calculateArea(width, height);
+  console.log("Периметр прямоугольника: " + perimeter);
+  console.log("Площадь прямоугольника: " + area);
+ </script>
+</head>
+<body>
+ <h1>Вычисление периметра и площади прямоугольника</h1>
+</body>
+</html>

@@ -1,0 +1,21 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Вычисление функций</title>
+ <meta charset="utf-8">
+ <script>
+  // Вычисление функции y = 3cos(1/2x + 2π/3)
+  let x =prompt('Введите x');
+  var y = 3 * Math.cos(0.5 * x + 2 * Math.PI / 3);
+  console.log(y);
+
+  // Вычисление функции y(x) = 5x^2cos(x) - 3x*ctg(x)
+  let x1 =prompt('Введите x');
+  var y1 = 5 * Math.pow(x1, 2) * Math.cos(x1) - 3 * x1 * (1 / Math.tan(x1));
+  console.log(y1);
+ </script>
+</head>
+<body>
+ <h1>Вычисление функций</h1>
+</body>

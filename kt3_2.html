@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Форма для опроса</title>
+  </head>
+  <body>
+    <form id="surveyForm">
+      <label for="name">Введите ваше имя:</label>
+      <input type="text" id="name" name="name" onblur="showNameAlert()"><br><br>
+      <label>Что вам больше нравится?</label><br>
+      <input type="radio" id="iceCream" name="preference" value="мороженое">
+      <label for="iceCream">Мороженое</label><br>
+      <input type="radio" id="chocolate" name="preference" value="шоколад">
+      <label for="chocolate">Шоколад</label><br><br>
+      <button type="button" onclick="showSurveyAlert()">Отправить</button>
+    </form>
+
+    <script>
+      function showNameAlert() {
+        alert("Внимательно вводите свое имя");
+      }
+
+      function showSurveyAlert() {
+        var preference;
+        if (document.getElementById("iceCream").checked) {
+          preference = "мороженое";
+        } else if (document.getElementById("chocolate").checked) {
+          preference = "шоколад";
+        }
+        alert("Спасибо, " + document.getElementById("name").value + ", за участие в опросе! Вы выбрали " + preference + ".");
+      }
+    </script>
+  </body>
+</html>
