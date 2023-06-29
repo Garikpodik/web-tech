@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=prompt('введите x:')
+        function calculate(x1,func1,func2){
+            if (x>-5){
+                console.log(func1(x));
+            }
+            else {
+                console.log(func2(x));
+            }
+            function func1(x){
+                console.log('Ваш y='+ Math.pow(x,2));
+            }
+            function func2(x){
+                console.log('Ваш y='+(6*x));
+            }        
+        }
+        calculate(x);
+
+        let arr = [];
+        for (let j=0;j<10;j++){
+            arr.push(Math.floor(Math.random()*101));
+        }
+        console.log(arr);
+        let filtered_arr=arr.filter(el=>el>6);
+        console.log('Отфильтрованный массив'+filtered_arr);
+        let sqrted_arr=arr.map(el=>Math.sqrt(el))
+        console.log('Отмапенный массив'+sqrted_arr);
+    </script>
+</body>
+</html>
